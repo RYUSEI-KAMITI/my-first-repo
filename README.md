@@ -1,4 +1,5 @@
-# my-first-repo
+# my-first-repo         
+## S25H2044 上戸琉生
 # 演習１
 ## 1-A
 ## 方針
