@@ -57,11 +57,22 @@ def moving_average(data, window=3):
         return []
     for i in range(len(data) - window + 1):
         s = 0
-    for j in range(window):
+        for j in range(window):
             s += data[i + j]
         result.append(s / window)
     return result
+print(moving_average([1, 2, 3, 4, 5]))
+print(moving_average([10, 20, 30, 40]))
+print(moving_average([1, 2, 3], window=0))
+print(moving_average([1, 2, 3], window=3))
+print(moving_average([1, 2, 3], window=4))
 ```
+## 実行結果
+[2.0, 3.0, 4.0]
+[20.0, 30.0]
+[]
+[2.0]
+[]
 ## 2-B 存在しない機能の確認
 Copilotに質問した後、実際に確認すると、DataFrame.remove_outliers()というメソッドは存在しませんでした。この演習で、AIの回答が必ず正しいとは限らないと分かりました。AIの回答をそのまま信じず、実行したり公式ドキュメントで確認したりすることが大切だと思いました。
 # 演習3
